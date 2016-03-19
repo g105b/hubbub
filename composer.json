@@ -1,0 +1,13 @@
+{
+    "name": "g105b/smalltalk",
+    "type": "project",
+    "require": {
+        "brightflair/php.gt": "2.*"
+    },
+    "authors": [
+        {
+            "name": "Greg Bowler",
+            "email": "greg.bowler@g105b.com"
+        }
+    ]
+}
