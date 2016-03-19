@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>hubbub</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<!-- <script src="https://npmcdn.com/packery@2.0/dist/packery.pkgd.js"></script> -->
+
+<style type="text/css">
+	* { box-sizing: border-box; } 
+
+	body { font-family: sans-serif; }
+
+	.grid {
+		background: #DDD;
+		max-width: 100%;
+		list-style: none;
+		display: block;
+	}
+	.grid-item {
+		position: relative;
+		float: left;
+		background: none;
+		padding: 20px;
+		width: 15%;
+		height: 200px;
+		overflow: visible;
+	}
+
+	.grid-inner {
+		width: 200px;
+		height: 200px;
+		position: relative;
+		display: block;
+	}
+
+	.face {
+		position: absolute;
+		background: red;
+		border-radius: 100em;
+	}
+
+	.face--silent {
+		left: 40%;
+		right: 40%;
+		top: 40%;
+		bottom: 40%;
+	}
+
+	.face--quiet {
+		left: 20%;
+		right: 20%;
+		top: 20%;
+		bottom: 20%;
+	}
+
+	.face--chatty {
+		left: 0%;
+		right: 0%;
+		top: 0%;
+		bottom: 0%;
+	}
+
+</style>
+
+</head>
+<body>
+
+<h1>Layout test</h1>
+
+<ul class="grid">
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--chatty"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--chatty"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--chatty"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+</ul>
+
+</script>
+
+</body>
+</html>
