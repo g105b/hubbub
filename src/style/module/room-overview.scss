@@ -4,12 +4,15 @@
 	overflow: hidden;
 	list-style-type: none;
 
-	>li {
-		float: left;
-		width: 10rem;
-		height: 10rem;
-		margin: 2rem;
-		border: 2px solid black;
-		background: white;
+	>a {
+
+		>li {
+			float: left;
+			width: 10rem;
+			height: 10rem;
+			margin: 2rem;
+			border: 2px solid black;
+			background: white;
+		}
 	}
 }
