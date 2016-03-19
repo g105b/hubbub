@@ -1,2 +1,5 @@
 /composer.phar
 /vendor/
+/www/style-*
+/www/script-*
+/www/static-fingerprint
