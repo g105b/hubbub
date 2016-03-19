@@ -14,4 +14,4 @@ Downcast and disillusioned (not really) we took to the streets of Nottingham. Ou
 
 The concept is that you can join ‘rooms’ and talk over audio. If you just want to hang out and listen to the conversation that’s fine or you can join in with a ‘push-to-talk’ button. If everything gets too noisy you can create a new room. Rooms can be tagged with subjects forum-style or left open-ended for general chitter chattings.
 
-Greg is currently marking up the general prototype of the idea which can be made into a Chrome packaged app. Helen is working on the UI. I’m writing this and trying to shake the doom-feelings that have been coming on since drinking the unusal Big Bamboo Jamaican Irish Moss Peanut Flavoured Drink which I mistakenly thought might be helpful to morale.
+Greg is currently marking up the general prototype of the idea which can be made into a Chrome packaged app. Helen is working on the UI. I’m writing this and trying to shake the doom-feelings that have been coming on since drinking the unusal [Big Bamboo Jamaican Irish Moss Peanut Flavoured Drink](https://youtu.be/C9UoCME9e_I) which I mistakenly thought might be helpful to morale.
