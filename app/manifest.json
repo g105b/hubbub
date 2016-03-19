@@ -1,0 +1,20 @@
+{
+  "name": "hubbub",
+  "description": "To Keep You Sane",
+  "version": "0.1",
+  "manifest_version": 2,
+
+  "app": {
+    "background": {
+      "scripts": ["runtime.js"]
+    }
+  },
+
+  "permissions": [
+    "webview"
+  ],
+
+  "icons": { "16": "icon-16.png", "128": "icon-128.png" },
+
+  "content_security_policy": "script-src 'self' http://localhost:8080; http://hubbub.g105b.com object-src 'self'"
+}
