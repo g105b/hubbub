@@ -54,6 +54,7 @@ function talk_start() {
 function talk_end() {
 	recorder && recorder.stop();
 	upload();
+	talkBtn.disabled = true;
 }
 
 function upload() {
@@ -62,10 +63,18 @@ function upload() {
 
 		var
 			fd = new FormData(),
+			xhr = new XMLHttpRequest(),
 		$$;
 
 		fd.append("sound", blob);
+		xhr.open("POST", "/transmit");
+		xhr.addEventListener("load", upload_cb);
+		xhr.send(fd);
 	});
+}
+
+function upload_cb() {
+	talkBtn.disabled = false;
 }
 
 });//#
