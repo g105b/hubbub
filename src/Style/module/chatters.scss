@@ -4,20 +4,15 @@
 	list-style: none;
 	display: block;
 	box-sizing: border-box;
-	margin: 0;
+	margin: 0 0 1rem 0;
 	padding: 0;
-}
-.grid:nth-child(odd) .grid-item {
-	width: 20%;
-}
-.grid:nth-child(even) .grid-item {
-	width: 30%;
 }
 .grid-item {
 	position: relative;
 	float: left;
 	background: none;
-	height: 100px;
+	height: 33vw;
+	width: 33vw;
 	overflow: visible;
 	box-sizing: border-box;
 }
@@ -61,23 +56,6 @@
 .face--monkey {
 	background-image: url('/Asset/img/monkey.svg');
 }
-
-.face--10 {
-	background-size: 10% 10%;
-}
-
-.face--20 {
-	background-size: 10% 10%;
-}
-
-.face--30 {
-	background-size: 10% 10%;
-}
-
-.face--40 {
-	background-size: 10% 10%;
-}
-
 .m-muteable {
 	display: none;
 }
