@@ -59,3 +59,20 @@
 .m-muteable {
 	display: none;
 }
+.m-muteable + label {
+	position: relative;
+}
+.m-muteable:checked + label span::before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	text-align: center;
+	background-image: url('/Asset/img/cross.svg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80%;
+}
