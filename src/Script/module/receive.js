@@ -25,16 +25,34 @@ function poll_load() {
 		i,
 	$$;
 
+	dateLastListened = new Date();
+
 	for(i = 0, len = obj.length; i < len; i++) {
 		play(obj[i].path);
 	}
 
-	dateLastListened = new Date();
 	setTimeout(poll, 2000);
 }
 
 function play(path) {
+	var
+		audio = new Audio(path),
+		user,
+	$$;
+
 	console.log("PLAYING: " + path);
+	user = path.match(/^\/Sound\/.+_(.+)\.wav/)[1];
+	showSound(user, audio);
+
+	audio.play();
+}
+
+/**
+ * @param {string} user User ID
+ * @param {Audio} audio The actual playing audio file - get the amplitude?
+ */
+function showSound(user, audio) {
+
 }
 
 return {
