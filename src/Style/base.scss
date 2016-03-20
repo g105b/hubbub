@@ -1,6 +1,31 @@
+html {
+	background: white;
+}
+
 body {
+	background: $col-bg;	
 	margin: 0;
-	background: $col-bg;
+	max-width: 400px;
+	padding: 1px;
+}
+
+h1 {
+	margin: 0;
+}
+
+.m-logo {
+	display: block;
+	position: relative;
+	width: 60%;
+	height: 2em;
+	margin: 1em auto 0;
+	background: url('/Asset/img/hubbub-logo.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: top center;
+	>span {
+		display: none;
+	}
 }
 
 .c1 {
