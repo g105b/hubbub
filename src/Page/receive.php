@@ -11,7 +11,7 @@ class Receive extends \Gt\Page\Logic {
 public function go() {
 	$this->uploadPath = implode("/", [
 		Path::get(Path::WWW),
-		"Upload"
+		"Sound"
 	]);
 
 	$arr = [];
@@ -24,11 +24,11 @@ public function go() {
 		$filename = $fileInfo->getFilename();
 		$details = explode("_", $filename);
 
-		$dateTimeFile = new DateTime($details[0]);
+		$timeFile = $details[0];
 
 		$obj = new StdClass();
-		$obj->time = $dateTimeFile->getTimestamp();
-		$obj->user = $details[1];
+		$obj->time = $timeFile;
+		$obj->user = strtok($details[1], ".");
 
 		if($obj->user == $_SESSION["User"]) {
 			continue;
@@ -37,6 +37,8 @@ public function go() {
 		if($obj->time < $_GET["time"]) {
 			continue;
 		}
+
+		$obj->path = "/Sound/" . $filename;
 
 		$arr []= $obj;
 	}

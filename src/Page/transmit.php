@@ -17,13 +17,13 @@ public function go() {
 		$_SESSION["User"] = uniqid();
 	}
 
-	$dateString = $this->dateTime->format("Y-m-dTH:i:s");
+	$dateString = $this->dateTime->getTimestamp();
 	$userString = $_SESSION["User"];
 	$fileString = $dateString . "_" . $userString;
 
 	$this->uploadPath = implode("/", [
 		Path::get(Path::WWW),
-		"Upload"
+		"Sound"
 	]);
 	$wwwPath = implode("/", [
 		$this->uploadPath,
