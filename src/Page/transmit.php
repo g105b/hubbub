@@ -2,6 +2,9 @@
 namespace App\Page;
 
 use Gt\Core\Path;
+use DateTime;
+use DateInterval;
+use DirectoryIterator;
 
 class Transmit extends \Gt\Page\Logic {
 
@@ -26,7 +29,7 @@ public function go() {
 	}
 
 	if(!empty($_FILES)) {
-		move_uploaded_file($_FILES["sound"]["tmp_name"], $filePath);
+		move_uploaded_file($_FILES["sound"]["tmp_name"], $wwwPath);
 	}
 
 	$this->tidy();
@@ -36,7 +39,7 @@ public function go() {
  * Delete any uploads older than expiry time.
  */
 private function tidy() {
-	$expired = (clone)$this->dateTime;
+	$expired = clone $this->dateTime;
 	$expired->sub(new DateInterval("PT10M"));
 
 	foreach (new DirectoryIterator($this->uploadPath) as $fileInfo) {
