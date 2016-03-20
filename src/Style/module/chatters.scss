@@ -4,6 +4,8 @@
 	list-style: none;
 	display: block;
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 .grid:nth-child(odd) .grid-item {
 	width: 20%;
@@ -15,9 +17,9 @@
 	position: relative;
 	float: left;
 	background: none;
-	padding: 20px;
 	height: 100px;
 	overflow: visible;
+	box-sizing: border-box;
 }
 
 .grid-inner {
@@ -33,31 +35,31 @@
 }
 
 .face--bear {
-	background-image: url('../asset/img/bear.svg');
+	background-image: url('/Asset/img/bear.svg');
 }
 .face--cat {
-	background-image: url('../asset/img/cat.svg');
+	background-image: url('/Asset/img/cat.svg');
 }
 .face--deer {
-	background-image: url('../asset/img/deer.svg');
+	background-image: url('/Asset/img/deer.svg');
 }
 .face--fox {
-	background-image: url('../asset/img/fox.svg');
+	background-image: url('/Asset/img/fox.svg');
 }
 .face--koala {
-	background-image: url('../asset/img/koala.svg');
+	background-image: url('/Asset/img/koala.svg');
 }
 .face--panda {
-	background-image: url('../asset/img/panda.svg');
+	background-image: url('/Asset/img/panda.svg');
 }
 .face--racoon {
-	background-image: url('../asset/img/racoon.svg');
+	background-image: url('/Asset/img/racoon.svg');
 }
 .face--wolf {
-	background-image: url('../asset/img/wolf.svg');
+	background-image: url('/Asset/img/wolf.svg');
 }
 .face--monkey {
-	background-image: url('../asset/img/monkey.svg');
+	background-image: url('/Asset/img/monkey.svg');
 }
 
 .face--10 {
