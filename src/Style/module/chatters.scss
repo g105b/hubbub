@@ -1,89 +1,81 @@
 .grid {
-		max-width: 100%;
-		list-style: none;
-		display: block;
-	}
-	.grid:nth-child(odd) .grid-item {
-		width: 20%;
-	}
-	.grid:nth-child(even) .grid-item {
-		width: 30%;
-	}
-	.grid-item {
-		position: relative;
-		float: left;
-		background: none;
-		padding: 20px;
-		height: 200px;
-		overflow: visible;
-	}
+	float: left;
+	width: 100%;
+	list-style: none;
+	display: block;
+	box-sizing: border-box;
+}
+.grid:nth-child(odd) .grid-item {
+	width: 20%;
+}
+.grid:nth-child(even) .grid-item {
+	width: 30%;
+}
+.grid-item {
+	position: relative;
+	float: left;
+	background: none;
+	padding: 20px;
+	height: 100px;
+	overflow: visible;
+}
 
-	.grid-inner {
-		width: 100px;
-		height: 200px;
-		position: relative;
-		display: block;
-	}
+.grid-inner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: block;
+}
 
-	.face {
-		position: absolute;
-		border-radius: 100em;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
+.face {
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
 
-	.face--bear {
-		background-image: url('../asset/img/bear.svg');
-	}
-	.face--cat {
-		background-image: url('../asset/img/cat.svg');
-	}
-	.face--deer {
-		background-image: url('../asset/img/deer.svg');
-	}
-	.face--fox {
-		background-image: url('../asset/img/fox.svg');
-	}
-	.face--koala {
-		background-image: url('../asset/img/koala.svg');
-	}
-	.face--panda {
-		background-image: url('../asset/img/panda.svg');
-	}
-	.face--racoon {
-		background-image: url('../asset/img/racoon.svg');
-	}
-	.face--wolf {
-		background-image: url('../asset/img/wolf.svg');
-	}
-	.face--monkey {
-		background-image: url('../asset/img/monkey.svg');
-	}
+.face--bear {
+	background-image: url('../asset/img/bear.svg');
+}
+.face--cat {
+	background-image: url('../asset/img/cat.svg');
+}
+.face--deer {
+	background-image: url('../asset/img/deer.svg');
+}
+.face--fox {
+	background-image: url('../asset/img/fox.svg');
+}
+.face--koala {
+	background-image: url('../asset/img/koala.svg');
+}
+.face--panda {
+	background-image: url('../asset/img/panda.svg');
+}
+.face--racoon {
+	background-image: url('../asset/img/racoon.svg');
+}
+.face--wolf {
+	background-image: url('../asset/img/wolf.svg');
+}
+.face--monkey {
+	background-image: url('../asset/img/monkey.svg');
+}
 
-	.face--10 {
-		left: 10%;
-		right: 10%;
-		top: 10%;
-		bottom: 10%;
-	}
+.face--10 {
+	background-size: 10% 10%;
+}
 
-	.face--20 {
-		left: 20%;
-		right: 20%;
-		top: 20%;
-		bottom: 20%;
-	}
+.face--20 {
+	background-size: 10% 10%;
+}
 
-	.face--30 {
-		left: 30%;
-		right: 30%;
-		top: 30%;
-		bottom: 30%;
-	}
+.face--30 {
+	background-size: 10% 10%;
+}
 
-	.face--40 {
-		left: 40%;
-		right: 40%;
-		top: 40%;
-		bottom: 40%;
-	}
+.face--40 {
+	background-size: 10% 10%;
+}
+
+.m-muteable {
+	display: none;
+}
