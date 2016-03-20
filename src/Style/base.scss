@@ -1,3 +1,21 @@
+/*************************************
+* Fonts
+*************************************/
+
+@font-face {
+    font-family: 'folksregular';
+    src: url('/Asset/fonts/Folks-Normal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*************************************
+* Vars
+*************************************/
+
+$base_font: 'folksregular', sans-serif;
+
 html {
 	background: white;
 }
@@ -7,6 +25,7 @@ body {
 	margin: 0;
 	max-width: 400px;
 	padding: 1px;
+	font-family: $base_font;
 }
 
 h1 {
