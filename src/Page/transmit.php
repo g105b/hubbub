@@ -13,7 +13,13 @@ private $dateTime;
 public function go() {
 	$this->dateTime = new DateTime();
 
+	if(empty($_SESSION["User"])) {
+		$_SESSION["User"] = uniqid();
+	}
+
 	$dateString = $this->dateTime->format("Y-m-dTH:i:s");
+	$userString = $_SESSION["User"];
+	$fileString = $dateString . "_" . $userString;
 
 	$this->uploadPath = implode("/", [
 		Path::get(Path::WWW),
@@ -21,7 +27,7 @@ public function go() {
 	]);
 	$wwwPath = implode("/", [
 		$this->uploadPath,
-		$dateString . ".wav",
+		$fileString . ".wav",
 	]);
 
 	if(!is_dir($this->uploadPath)) {
@@ -40,11 +46,15 @@ public function go() {
  */
 private function tidy() {
 	$expired = clone $this->dateTime;
-	$expired->sub(new DateInterval("PT10M"));
+	$expired->sub(new DateInterval("PT2M"));
 
 	foreach (new DirectoryIterator($this->uploadPath) as $fileInfo) {
+		if($fileInfo->isDot()) {
+			continue;
+		}
+
 		$filename = $fileInfo->getFilename();
-		$dateFromFile = strtok($filename, ".");
+		$dateFromFile = strtok($filename, "_");
 		$dateTimeFile = new DateTime($dateFromFile);
 
 		if($dateTimeFile < $expired) {

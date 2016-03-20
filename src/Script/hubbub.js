@@ -14,6 +14,8 @@ $$;
 	talkBtn.addEventListener("mouseup", mouseup);
 
 	hubbub.transmit.setCallback(complete);
+
+	hubbub.receive.init();
 })();
 
 function mousedown() {
