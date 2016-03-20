@@ -11,6 +11,11 @@
 		background: url("/Asset/img/microphone.svg");
 		background-size: 100%;
 		border: none;
+		outline: none;
+
+		&:active {
+			-webkit-filter: hue-rotate(299deg) saturate(4);
+		}
 
 		&[disabled] {
 			// do something different here

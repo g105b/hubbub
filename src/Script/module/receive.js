@@ -44,6 +44,8 @@ function who_load() {
 			removeUser(uid);
 		}
 	});
+
+	setTimeout(who, 5000);
 }
 
 function createUser(uid) {
@@ -102,7 +104,22 @@ function play(path) {
  * @param {Audio} audio The actual playing audio file - get the amplitude?
  */
 function showSound(user, audio) {
+	var
+		userEl = document.querySelector("[data-user='" + user + "']"),
+	$$;
 
+	if(!userEl) {
+		userEl = document.querySelector("[data-user='nobody']");
+		userEl.setAttribute("data-user", user);
+	}
+
+	userEl.classList.add("talking");
+
+	(function(c_userEl) {
+		audio.addEventListener("ended", function() {
+			c_userEl.classList.remove("talking");
+		});
+	})(userEl);
 }
 
 return {
