@@ -10,94 +10,122 @@
 <style type="text/css">
 	* { box-sizing: border-box; } 
 
-	body { font-family: sans-serif; }
+	body { 
+		font-family: sans-serif;
+		background-color: rgb(0,160,153); 
+	}
 
 	.grid {
 		background: #DDD;
 		max-width: 100%;
 		list-style: none;
 		display: block;
+		margin-bottom: -3em;
+	}
+	.grid:nth-child(odd) .grid-item {
+		width: 20%;
+	}
+	.grid:nth-child(even) .grid-item {
+		width: 30%;
 	}
 	.grid-item {
 		position: relative;
 		float: left;
 		background: none;
 		padding: 20px;
-		width: 15%;
 		height: 200px;
 		overflow: visible;
 	}
 
 	.grid-inner {
-		width: 200px;
-		height: 200px;
+		width: 300px;
+		height: 300px;
 		position: relative;
 		display: block;
 	}
 
 	.face {
 		position: absolute;
-		background: red;
 		border-radius: 100em;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 
-	.face--silent {
-		left: 40%;
-		right: 40%;
-		top: 40%;
-		bottom: 40%;
+	.face--bear {
+		background-image: url('../asset/img/bear.svg');
+	}
+	.face--cat {
+		background-image: url('../asset/img/cat.svg');
+	}
+	.face--deer {
+		background-image: url('../asset/img/deer.svg');
+	}
+	.face--fox {
+		background-image: url('../asset/img/fox.svg');
+	}
+	.face--koala {
+		background-image: url('../asset/img/koala.svg');
+	}
+	.face--panda {
+		background-image: url('../asset/img/panda.svg');
+	}
+	.face--racoon {
+		background-image: url('../asset/img/racoon.svg');
+	}
+	.face--wolf {
+		background-image: url('../asset/img/wolf.svg');
+	}
+	.face--monkey {
+		background-image: url('../asset/img/monkey.svg');
 	}
 
-	.face--quiet {
+	.face--10 {
+		left: 10%;
+		right: 10%;
+		top: 10%;
+		bottom: 10%;
+	}
+
+	.face--20 {
 		left: 20%;
 		right: 20%;
 		top: 20%;
 		bottom: 20%;
 	}
 
-	.face--chatty {
-		left: 0%;
-		right: 0%;
-		top: 0%;
-		bottom: 0%;
+	.face--30 {
+		left: 30%;
+		right: 30%;
+		top: 30%;
+		bottom: 30%;
 	}
+
+	.face--40 {
+		left: 40%;
+		right: 40%;
+		top: 40%;
+		bottom: 40%;
+	}
+	
 
 </style>
 
 </head>
 <body>
 
-<h1>Layout test</h1>
-
 <ul class="grid">
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--chatty"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--chatty"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--chatty"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--quiet"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
-  <li class="grid-item"><span class="grid-inner"><i class="face face--silent"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--10 face--panda"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--20 face--bear"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--10 face--cat"></i></span></li>
+</ul>
+<ul class="grid">
+  <li class="grid-item"><span class="grid-inner"><i class="face face--40 face--deer"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--30 face--fox"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--10 face--koala"></i></span></li>
+<ul class="grid">
+  <li class="grid-item"><span class="grid-inner"><i class="face face--20 face--racoon"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--10 face--wolf"></i></span></li>
+  <li class="grid-item"><span class="grid-inner"><i class="face face--30 face--monkey"></i></span></li>
 </ul>
 
 </script>
