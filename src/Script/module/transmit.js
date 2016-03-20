@@ -5,6 +5,8 @@ var
 	audio_context,
 	recorder,
 	callback,
+	input,
+	audioStream,
 $$;
 
 function init() {
@@ -32,7 +34,8 @@ function init() {
 }
 
 function startUserMedia(stream) {
-	var input = audio_context.createMediaStreamSource(stream);
+	audioStream = stream;
+	input = audio_context.createMediaStreamSource(audioStream);
 	console.log('Media stream created.');
 
 	// Uncomment if you want the audio to feedback directly
@@ -44,6 +47,7 @@ function startUserMedia(stream) {
 }
 
 function talk_start() {
+	startUserMedia(audioStream);
 	recorder && recorder.record();
 	console.log("recording...");
 }

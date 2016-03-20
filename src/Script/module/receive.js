@@ -22,12 +22,15 @@ function poll() {
 function poll_load() {
 	var
 		obj = JSON.parse(this.responseText),
-		i,
+		i = 0,
+		len = obj.length
 	$$;
 
 	dateLastListened = new Date();
 
-	for(i = 0, len = obj.length; i < len; i++) {
+	console.log(len + " new sounds");
+
+	for(; i < len; i++) {
 		play(obj[i].path);
 	}
 

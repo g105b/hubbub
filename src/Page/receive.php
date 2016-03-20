@@ -34,7 +34,7 @@ public function go() {
 			continue;
 		}
 
-		if($obj->time <= $_GET["time"]) {
+		if($obj->time < $_GET["time"]) {
 			continue;
 		}
 
