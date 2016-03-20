@@ -5,6 +5,7 @@
 	list-style-type: none;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 
 	>.m-room-thumbnail {
 		display: inline-block;
@@ -13,14 +14,43 @@
 		text-decoration: none;
 
 		>li {
-			border: 2px solid black;
+			border: 2px solid white;
 			background: white;
 			height: 10rem;
 		}
 		.m-room-name {
 			text-align: center;
 			color: white;
-			margin: .5rem 0 0 0;
+			margin: .5rem 0 1.5rem 0;
+			font-family: $base_font;
 		}
 	}
+	>.m-room-thumbnail:nth-child(1n) {
+		>li {
+			background: $col-1;
+		}
+	}
+	>.m-room-thumbnail:nth-child(2n) {
+		>li {
+			background: $col-5;
+		}
+	}
+	>.m-room-thumbnail:nth-child(3n) {
+		>li {
+			background: $col-2;
+		}
+	}
+	>.m-room-thumbnail:nth-child(4n) {
+		>li {
+			background: $col-6;
+		}
+	}
+}
+
+.m-new-room {
+	display: block;
+	color: white;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 1rem;
 }
