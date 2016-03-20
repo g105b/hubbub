@@ -37,13 +37,18 @@ h1 {
 	width: 60%;
 	height: 2em;
 	margin: 1em auto 0;
-	background: url('/Asset/img/hubbub-logo.svg');
+	background-image: url('/Asset/img/hubbub-logo.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: top center;
 	>span {
 		display: none;
 	}
+}
+.m-logo.m-logo-icon {
+	background-image: url('/Asset/img/hubbub-icon.svg');
+	margin-bottom: 1rem;
+	margin-top: .5em;
 }
 
 .c1 {
