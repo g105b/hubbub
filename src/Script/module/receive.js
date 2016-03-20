@@ -3,10 +3,57 @@ window.hubbub.receive = (function() {
 
 var
 	dateLastListened = new Date(),
+	buffer = 500,
 $$;
 
 function init() {
-	poll();
+	who();
+
+	setTimeout(poll, 2000);
+}
+
+function who() {
+	var
+		xhr = new XMLHttpRequest(),
+	$$;
+
+	xhr.open("GET", "/who");
+	xhr.addEventListener("load", who_load);
+	xhr.send();
+}
+
+function who_load() {
+	var
+		obj = JSON.parse(this.responseText),
+		i = 0,
+		len = obj.length,
+		el,
+	$$;
+
+	for(; i < len; i++) {
+		el = document.querySelector("[data-user='" + obj[i] + "']");
+		if(!el) {
+			createUser(obj[i]);
+		}
+	}
+
+	[].forEach.call(document.querySelectorAll("[data-user]"), function(u) {
+		var uid = u.getAttribute("data-user");
+
+		if(obj.indexOf(uid) < 0) {
+			removeUser(uid);
+		}
+	});
+}
+
+function createUser(uid) {
+	var nobody = document.querySelector("[data-user='nobody']");
+	nobody.setAttribute("data-user", uid);
+}
+
+function removeUser(uid) {
+	var person = document.querySelector("[data-user='" + uid + "']");
+	person.setAttribute("data-user", "nobody");
 }
 
 function poll() {
@@ -34,7 +81,7 @@ function poll_load() {
 		play(obj[i].path);
 	}
 
-	setTimeout(poll, 2000);
+	setTimeout(poll, buffer);
 }
 
 function play(path) {

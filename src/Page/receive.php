@@ -14,6 +14,10 @@ public function go() {
 		"Sound"
 	]);
 
+	if(empty($_SESSION["Played"])) {
+		$_SESSION["Played"] = [];
+	}
+
 	$arr = [];
 
 	foreach (new DirectoryIterator($this->uploadPath) as $fileInfo) {
@@ -38,7 +42,12 @@ public function go() {
 			continue;
 		}
 
+		if(in_array($filename, $_SESSION["Played"])) {
+			continue;
+		}
+
 		$obj->path = "/Sound/" . $filename;
+		$_SESSION["Played"] []= $filename;
 
 		$arr []= $obj;
 	}
