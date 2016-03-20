@@ -5,6 +5,10 @@
 		height: 3rem;
 		background: url("/asset/img/microphone.svg");
 		background-size: 100%;
+
+		&[disabled] {
+			// do something different here
+		}
 	}
 }
 
